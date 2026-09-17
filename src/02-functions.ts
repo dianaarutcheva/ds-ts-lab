@@ -64,3 +64,18 @@ function sortColleagues(
 console.log(sortColleagues(colleagues.current, (a, b) => (a.contact.extension - b.contact.extension),3));
 console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length),1));
 console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length))); // NEW
+
+
+
+//add interest
+function addInterest(friend: Friend, interest: string): string[] {
+  if (friend.interests === undefined) {
+    friend.interests = [];
+  }
+
+  friend.interests.push(interest);
+  return friend.interests;
+}
+
+console.log(addInterest(friends[0], "Politics"));
+console.log(addInterest(friends[1], "Politics"));
